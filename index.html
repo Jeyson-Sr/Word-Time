@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head> 
+<body>
+    <div class="contenidoReloj"> 
+        
+        <form class="inputUbicacion" id="form">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="country" placeholder="Ingresa el País:"  autocomplete="off" required>
+            <div id="country-suggestions" class="suggestions"></div>
+            <button class="bto--Enviara" type="submit">Ver Hora</button>
+        </form>
+        
+        <h2 class="nombrePais" id="nombrePaisUbicado">Pais:</h2>
+
+        <div class="relojDigital">
+            <div class="marcoReloj">
+                <div class="contendorReloj--numeros" id="contendorReloj--numeros">
+                <div class="contendorReloj--horas" id="contendorReloj--horas">
+        
+        <div class="numero--hora__primero" id="numero--hora__primero">
+            <div id="superior--hora__primero" class="custom-shape--superior--hora__primero"></div>
+            <div id="superior__derecho--hora__primero" class="custom-shape--superior__derecho--hora__primero"></div>
+            <div id="superior__izquierdo--hora__primero" class="custom-shape--superior__izquierdo--hora__primero"></div>
+            <div id="centro--hora__primero" class="custom-shape--centro--hora__primero"></div>
+            <div id="inferior__derecho--hora__primero" class="custom-shape--inferior__derecho--hora__primero"></div>
+            <div id="inferior__izquierdo--hora__primero" class="custom-shape--inferior__izquierdo--hora__primero"></div>
+            <div id="inferior-hora__primero" class="custom-shape--inferior--hora__primero"></div>
+        </div>
+
+        <div class="numero--hora__segundo" id="numero--hora__segundo">
+            <div id="superior--hora__segundo" class="custom-shape--superior--hora__segundo"></div>
+            <div id="superior__derecho--hora__segundo" class="custom-shape--superior__derecho--hora__segundo"></div>
+            <div id="superior__izquierdo--hora__segundo" class="custom-shape--superior__izquierdo--hora__segundo"></div>
+            <div id="centro--hora__segundo" class="custom-shape--centro--hora__segundo"></div>
+            <div id="inferior__derecho--hora__segundo" class="custom-shape--inferior__derecho--hora__segundo"></div>
+            <div id="inferior__izquierdo--hora__segundo" class="custom-shape--inferior__izquierdo--hora__segundo"></div>
+            <div id="inferior--hora__segundo" class="custom-shape--inferior--hora__segundo"></div>
+        </div>
+    </div>
+
+    <div class="puntosSeparacionReloj" id="puntosSeparacionReloj">
+        <div id="punto1" class="punto1"></div>
+        <div id="punto2" class="punto2"></div>
+    </div>
+
+    <div class="contendorReloj--minutos" id="contendorReloj--minutos">
+
+        <div class="numero--minuto__primero" id="numero--minuto__primero">
+            <div id="superior--minuto__primero" class="custom-shape--superior--minuto__primero"></div>
+            <div id="superior__derecho--minuto__primero" class="custom-shape--superior__derecho--minuto__primero"></div>
+            <div id="superior__izquierdo--minuto__primero" class="custom-shape--superior__izquierdo--minuto__primero"></div>
+            <div id="centro--minuto__primero" class="custom-shape--centro--minuto__primero"></div>
+            <div id="inferior__derecho--minuto__primero" class="custom-shape--inferior__derecho--minuto__primero"></div>
+            <div id="inferior__izquierdo--minuto__primero" class="custom-shape--inferior__izquierdo--minuto__primero"></div>
+            <div id="inferior--minuto__primero" class="custom-shape--inferior--minuto__primero"></div>
+        </div>
+
+        <div class="numero--minuto__segundo" id="numero--minuto__segundo">
+            <div id="superior--minuto__segundo" class="custom-shape--superior--minuto__segundo"></div>
+            <div id="superior__derecho--minuto__segundo" class="custom-shape--superior__derecho--minuto__segundo"></div>
+            <div id="superior__izquierdo--minuto__segundo" class="custom-shape--superior__izquierdo--minuto__segundo"></div>
+            <div id="centro--minuto__segundo" class="custom-shape--centro--minuto__segundo"></div>
+            <div id="inferior__derecho--minuto__segundo" class="custom-shape--inferior__derecho--minuto__segundo"></div>
+            <div id="inferior__izquierdo--minuto__segundo" class="custom-shape--inferior__izquierdo--minuto__segundo"></div>
+            <div id="inferior--minuto__segundo" class="custom-shape--inferior--minuto__segundo"></div>
+        </div>
+    </div>
+</div>
+
+            </div>
+            <div class="marcoReloj--superior"> </div>
+            <div class="marcoReloj--inferior1"> </div>
+            <div class="marcoReloj--inferior2"> </div>
+
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

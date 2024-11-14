@@ -1,0 +1,667 @@
+:root {
+    --color-primario: black;
+    --color-secundario: white;
+  }
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.bto--Enviara{
+  border: none;
+  width: 100px;
+  padding: 10px 20px;
+  background-color: var(--color-primario);
+  border: 3px solid var(--color-secundario);
+  border-radius:10px ;
+  cursor: pointer;
+  color: white;
+}
+
+.contenidoReloj{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(255, 240, 124);
+    display: grid;
+    place-content: center;
+  }
+  
+  .nombrePais{
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    margin-bottom: 50px;
+    line-height: 2;
+    font-weight: bolder;
+}
+
+.inputUbicacion{
+  width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius:20px ;
+    margin-bottom: 20px;
+    gap: 20px;
+    background-color: white;
+    position: relative;
+  }
+  
+  .inputUbicacion input[type="text"]{
+    outline: none;
+    width: 80%;
+    border: transparent;
+    background-color: transparent;
+  }
+  .suggestions {
+    max-height: 150px;
+    overflow-y: auto;
+    scrollbar-width: none;
+    background-color: white;
+    position: absolute;
+    width: 100px;
+    z-index: 1000;
+    top: 50px;
+    left: 45px;
+  }
+  .suggestions div {
+    padding: 10px;
+    cursor: pointer;
+  }
+  .suggestions div:hover {
+    background-color: #c6c6c6;
+    border-radius: 20px;
+  }
+  .relojDigital{
+    position: relative;
+  }
+
+.marcoReloj{
+    width: 600px;
+    height: 300px;
+    background-color: var(--color-secundario);
+    border: 25px solid var(--color-primario);
+    border-radius: 80px;
+    display: grid;
+    place-content: center;
+}
+.marcoReloj--superior{
+    width: 200px;
+    height: 15px;
+    background-color: var(--color-primario);
+    border-radius: 50px;
+    position: absolute;
+    bottom: 294px;
+    left: 200px;
+}
+.marcoReloj--inferior1{
+    width: 100px;
+    height: 20px;
+    background-color: var(--color-primario);
+    border-radius: 50px;
+    position: absolute;
+    left: 100px;
+    bottom: -10px;
+}
+
+.marcoReloj--inferior2{
+    width: 100px;
+    height: 20px;
+    background-color: var(--color-primario);
+    border-radius: 50px;
+    position: absolute;
+    left: 400px;
+    bottom: -10px;
+}
+.contendorReloj--numeros{
+    width: 520px;
+    height: 220px;
+    /*color del fondo de los numeros*/
+    background-color: var(--color-primario);
+    border-radius: 40px;
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.contendorReloj--horas{
+    width: 200px;
+    height: 200px;
+}
+.puntosSeparacionReloj{
+    width: 30px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.punto1{
+    width: 15px;
+    height: 15px;
+    border-radius: 3px;
+    /*Color de los putos*/
+    background-color: var(--color-secundario);
+    margin-bottom: 20px;
+}
+.punto2{
+    width: 15px;
+    height: 15px;
+    border-radius: 3px;
+    /*Color de los putos*/
+    background-color: var(--color-secundario);
+}
+.contendorReloj--minutos{ 
+    width: 200px;
+    height: 200px;
+}
+
+
+  /*---------------------Hoara primero----------------------------*/
+
+  
+  
+  .numero--hora__primero{
+      position: absolute;
+      top:310px;
+      left: -380px;
+    }
+    
+    
+    .custom-shape--centro--hora__primero {
+        position: absolute;
+        width: 47px;
+      height: 15px;
+      background-color: var(--color-secundario);
+      clip-path: polygon(18% 0%, 85% 0%, 100% 50%, 85% 100%, 18% 100%, 0% 50%);
+      bottom: 152px;
+      left: 485.6px;
+    }
+  
+  .custom-shape--superior--hora__primero{
+      position: absolute;
+      width: 51px;
+      height: 15px;
+      background-color: var(--color-secundario);
+      clip-path: polygon(
+          10% 0%,  /* Punto 1: cerca del borde superior izquierdo (10% desde la izquierda, 0% desde arriba) */
+          90% 0%,  /* Punto 2: cerca del borde superior derecho (90% desde la izquierda, 0% desde arriba) */
+          100% 25%,/* Punto 3: en el borde derecho, a la mitad vertical (100% desde la izquierda, 50% desde arriba) */
+          80% 100%,/* Punto 4: cerca del borde inferior derecho (90% desde la izquierda, 100% desde arriba) */
+          20% 100%,/* Punto 5: cerca del borde inferior izquierdo (10% desde la izquierda, 100% desde arriba) */
+          0% 25%   /* Punto 6: en el borde izquierdo, a la mitad vertical (0% desde la izquierda, 50% desde arriba) */
+          );
+      bottom: 201px;
+      left: 484px;
+  }
+  
+  .custom-shape--inferior--hora__primero{
+  position: absolute;
+      width: 52px;
+      height: 15px;
+      background-color: var(--color-secundario);
+      clip-path: polygon(
+        20% 0%,  /* Punto 1: cerca del borde superior izquierdo (10% desde la izquierda, 0% desde arriba) */
+        80% 0%,  /* Punto 2: cerca del borde superior derecho (90% desde la izquierda, 0% desde arriba) */
+        100% 80%,/* Punto 3: en el borde derecho, a la mitad vertical (100% desde la izquierda, 50% desde arriba) */
+        90% 100%,/* Punto 4: cerca del borde inferior derecho (90% desde la izquierda, 100% desde arriba) */
+        10% 100%,/* Punto 5: cerca del borde inferior izquierdo (10% desde la izquierda, 100% desde arriba) */
+        0% 80%   /* Punto 6: en el borde izquierdo, a la mitad vertical (0% desde la izquierda, 50% desde arriba) */
+        );
+        bottom: 103px;
+        left: 483px;
+    }
+    
+    .custom-shape--superior__derecho--hora__primero{
+        position: absolute;
+        width: 47px;
+        height: 15px;
+        background-color:var(--color-secundario);
+        clip-path: polygon(
+        18% 0%,
+        85% 0%,
+        100% 50%,
+        85% 100%,
+        6% 100%,
+        0% 75%
+        );
+        bottom: 178px;
+        left: 461px;
+        transform: rotate(90deg);
+    }
+    .custom-shape--superior__izquierdo--hora__primero{
+        position: absolute;
+        width: 47px;
+      height: 15px;
+      background-color: var(--color-secundario);
+      clip-path: polygon(
+        18% 0%,
+        85% 0%,
+        100% 50%,
+        85% 100%,
+          18% 100%,
+          0% 20%
+          );
+          bottom: 178px;
+          left: 510px;
+          transform: rotate(90deg);
+        }
+        
+  .custom-shape--inferior__derecho--hora__primero{
+      position: absolute;
+      width: 47px;
+      height: 15px;
+      background-color:var(--color-secundario);
+      clip-path: polygon(
+          18% 0%,
+          85% 0%,
+          100% 50%,
+          85% 100%,
+          18% 100%,
+          0% 20%
+          );
+          bottom: 126px;
+          left: 461px;
+          transform: rotate(270deg);
+  }
+  
+  .custom-shape--inferior__izquierdo--hora__primero{
+    position: absolute;
+    width: 47px;
+      height: 15px;
+      background-color:var(--color-secundario);
+      clip-path: polygon(
+          18% 0%,
+          85% 0%,
+          100% 50%,
+          85% 100%,
+          6% 100%,
+          0% 75%
+          );
+          bottom: 126px;
+    left: 510px;
+    transform:rotate(-90deg) ;
+}
+
+
+/*---------------------Hoara segundo----------------------------*/
+
+.numero--hora__segundo{
+    position: absolute;
+    top:310px;
+    left: -300px;
+}
+
+
+.custom-shape--centro--hora__segundo {
+    position: absolute;
+    width: 47px;
+    height: 15px;
+    background-color:var(--color-secundario);
+    clip-path: polygon(18% 0%, 85% 0%, 100% 50%, 85% 100%, 18% 100%, 0% 50%);
+    bottom: 152px;
+    left: 485.6px;
+}
+
+.custom-shape--superior--hora__segundo{
+    position: absolute;
+    width: 51px;
+    height: 15px;
+    background-color: var(--color-secundario);
+    clip-path: polygon(
+        10% 0%,  /* Punto 1: cerca del borde superior izquierdo (10% desde la izquierda, 0% desde arriba) */
+        90% 0%,  /* Punto 2: cerca del borde superior derecho (90% desde la izquierda, 0% desde arriba) */
+        100% 25%,/* Punto 3: en el borde derecho, a la mitad vertical (100% desde la izquierda, 50% desde arriba) */
+        80% 100%,/* Punto 4: cerca del borde inferior derecho (90% desde la izquierda, 100% desde arriba) */
+        20% 100%,/* Punto 5: cerca del borde inferior izquierdo (10% desde la izquierda, 100% desde arriba) */
+        0% 25%   /* Punto 6: en el borde izquierdo, a la mitad vertical (0% desde la izquierda, 50% desde arriba) */
+      );
+      bottom: 201px;
+      left: 484px;
+    }
+  
+  .custom-shape--inferior--hora__segundo{
+      position: absolute;
+      width: 52px;
+      height: 15px;
+      background-color: var(--color-secundario);
+      clip-path: polygon(
+          20% 0%,  /* Punto 1: cerca del borde superior izquierdo (10% desde la izquierda, 0% desde arriba) */
+          80% 0%,  /* Punto 2: cerca del borde superior derecho (90% desde la izquierda, 0% desde arriba) */
+          100% 80%,/* Punto 3: en el borde derecho, a la mitad vertical (100% desde la izquierda, 50% desde arriba) */
+          90% 100%,/* Punto 4: cerca del borde inferior derecho (90% desde la izquierda, 100% desde arriba) */
+          10% 100%,/* Punto 5: cerca del borde inferior izquierdo (10% desde la izquierda, 100% desde arriba) */
+          0% 80%   /* Punto 6: en el borde izquierdo, a la mitad vertical (0% desde la izquierda, 50% desde arriba) */
+          );
+          bottom: 103px;
+          left: 483px;
+        }
+        
+        .custom-shape--superior__derecho--hora__segundo{
+            position: absolute;
+            width: 47px;
+            height: 15px;
+            background-color:var(--color-secundario);
+            clip-path: polygon(
+                18% 0%,
+                85% 0%,
+                100% 50%,
+                85% 100%,
+                6% 100%,
+                0% 75%
+                );
+                bottom: 178px;
+                left: 461px;
+                transform: rotate(90deg);
+            }
+            .custom-shape--superior__izquierdo--hora__segundo{
+                position: absolute;
+                width: 47px;
+      height: 15px;
+      background-color:var(--color-secundario);
+      clip-path: polygon(
+        18% 0%,
+        85% 0%,
+        100% 50%,
+         85% 100%,
+          18% 100%,
+          0% 20%
+          );
+          bottom: 178px;
+          left: 510px;
+          transform: rotate(90deg);
+        }
+        
+        .custom-shape--inferior__derecho--hora__segundo{
+            position: absolute;
+            width: 47px;
+            height: 15px;
+            background-color:var(--color-secundario);
+            clip-path: polygon(
+                18% 0%,
+                85% 0%,
+                100% 50%,
+                85% 100%,
+                18% 100%,
+                0% 20%
+                );
+                bottom: 126px;
+                left: 461px;
+                transform: rotate(270deg);
+            }
+            
+            .custom-shape--inferior__izquierdo--hora__segundo{
+                position: absolute;
+                width: 47px;
+                height: 15px;
+                background-color: var(--color-secundario);
+                clip-path: polygon(
+                    18% 0%,
+                    85% 0%,
+          100% 50%,
+           85% 100%,
+            6% 100%,
+            0% 75%
+            );
+            bottom: 126px;
+    left: 510px;
+    transform:rotate(-90deg) ;
+}
+
+
+
+/*---------------------Minuto primero----------------------------*/
+
+
+
+  
+.numero--minuto__primero{
+    position: absolute;
+    top:310px;
+    left: -120px;
+  }
+  
+  
+  .custom-shape--centro--minuto__primero {
+      position: absolute;
+      width: 47px;
+    height: 15px;
+    background-color:var(--color-secundario);
+    clip-path: polygon(18% 0%, 85% 0%, 100% 50%, 85% 100%, 18% 100%, 0% 50%);
+    bottom: 152px;
+    left: 485.6px;
+  }
+
+.custom-shape--superior--minuto__primero{
+    position: absolute;
+    width: 51px;
+    height: 15px;
+    background-color: var(--color-secundario);
+    clip-path: polygon(
+        10% 0%,  /* Punto 1: cerca del borde superior izquierdo (10% desde la izquierda, 0% desde arriba) */
+        90% 0%,  /* Punto 2: cerca del borde superior derecho (90% desde la izquierda, 0% desde arriba) */
+        100% 25%,/* Punto 3: en el borde derecho, a la mitad vertical (100% desde la izquierda, 50% desde arriba) */
+        80% 100%,/* Punto 4: cerca del borde inferior derecho (90% desde la izquierda, 100% desde arriba) */
+        20% 100%,/* Punto 5: cerca del borde inferior izquierdo (10% desde la izquierda, 100% desde arriba) */
+        0% 25%   /* Punto 6: en el borde izquierdo, a la mitad vertical (0% desde la izquierda, 50% desde arriba) */
+        );
+    bottom: 201px;
+    left: 484px;
+}
+
+.custom-shape--inferior--minuto__primero{
+position: absolute;
+    width: 52px;
+    height: 15px;
+    background-color:var(--color-secundario);
+    clip-path: polygon(
+      20% 0%,  /* Punto 1: cerca del borde superior izquierdo (10% desde la izquierda, 0% desde arriba) */
+      80% 0%,  /* Punto 2: cerca del borde superior derecho (90% desde la izquierda, 0% desde arriba) */
+      100% 80%,/* Punto 3: en el borde derecho, a la mitad vertical (100% desde la izquierda, 50% desde arriba) */
+      90% 100%,/* Punto 4: cerca del borde inferior derecho (90% desde la izquierda, 100% desde arriba) */
+      10% 100%,/* Punto 5: cerca del borde inferior izquierdo (10% desde la izquierda, 100% desde arriba) */
+      0% 80%   /* Punto 6: en el borde izquierdo, a la mitad vertical (0% desde la izquierda, 50% desde arriba) */
+      );
+      bottom: 103px;
+      left: 483px;
+  }
+  
+  .custom-shape--superior__derecho--minuto__primero{
+      position: absolute;
+      width: 47px;
+      height: 15px;
+      background-color:var(--color-secundario);
+      clip-path: polygon(
+      18% 0%,
+      85% 0%,
+      100% 50%,
+      85% 100%,
+      6% 100%,
+      0% 75%
+      );
+      bottom: 178px;
+      left: 461px;
+      transform: rotate(90deg);
+  }
+  .custom-shape--superior__izquierdo--minuto__primero{
+      position: absolute;
+      width: 47px;
+    height: 15px;
+    background-color: var(--color-secundario);
+    clip-path: polygon(
+      18% 0%,
+      85% 0%,
+      100% 50%,
+      85% 100%,
+        18% 100%,
+        0% 20%
+        );
+        bottom: 178px;
+        left: 510px;
+        transform: rotate(90deg);
+      }
+      
+.custom-shape--inferior__derecho--minuto__primero{
+    position: absolute;
+    width: 47px;
+    height: 15px;
+    background-color: var(--color-secundario);
+    clip-path: polygon(
+        18% 0%,
+        85% 0%,
+        100% 50%,
+        85% 100%,
+        18% 100%,
+        0% 20%
+        );
+        bottom: 126px;
+        left: 461px;
+        transform: rotate(270deg);
+}
+
+.custom-shape--inferior__izquierdo--minuto__primero{
+  position: absolute;
+  width: 47px;
+    height: 15px;
+    background-color:var(--color-secundario);
+    clip-path: polygon(
+        18% 0%,
+        85% 0%,
+        100% 50%,
+        85% 100%,
+        6% 100%,
+        0% 75%
+        );
+        bottom: 126px;
+  left: 510px;
+  transform:rotate(-90deg) ;
+}
+
+
+/*---------------------Minuto segundo----------------------------*/
+
+.numero--minuto__segundo{
+  position: absolute;
+  top:310px;
+  left: -40px;
+}
+
+
+.custom-shape--centro--minuto__segundo {
+  position: absolute;
+  width: 47px;
+  height: 15px;
+  background-color:var(--color-secundario);
+  clip-path: polygon(18% 0%, 85% 0%, 100% 50%, 85% 100%, 18% 100%, 0% 50%);
+  bottom: 152px;
+  left: 485.6px;
+}
+
+.custom-shape--superior--minuto__segundo{
+  position: absolute;
+  width: 51px;
+  height: 15px;
+  background-color:var(--color-secundario);
+    clip-path: polygon(
+      10% 0%,  /* Punto 1: cerca del borde superior izquierdo (10% desde la izquierda, 0% desde arriba) */
+      90% 0%,  /* Punto 2: cerca del borde superior derecho (90% desde la izquierda, 0% desde arriba) */
+      100% 25%,/* Punto 3: en el borde derecho, a la mitad vertical (100% desde la izquierda, 50% desde arriba) */
+      80% 100%,/* Punto 4: cerca del borde inferior derecho (90% desde la izquierda, 100% desde arriba) */
+      20% 100%,/* Punto 5: cerca del borde inferior izquierdo (10% desde la izquierda, 100% desde arriba) */
+      0% 25%   /* Punto 6: en el borde izquierdo, a la mitad vertical (0% desde la izquierda, 50% desde arriba) */
+    );
+    bottom: 201px;
+    left: 484px;
+  }
+
+.custom-shape--inferior--minuto__segundo{
+    position: absolute;
+    width: 52px;
+    height: 15px;
+    background-color:var(--color-secundario);
+        clip-path: polygon(
+        20% 0%,  /* Punto 1: cerca del borde superior izquierdo (10% desde la izquierda, 0% desde arriba) */
+        80% 0%,  /* Punto 2: cerca del borde superior derecho (90% desde la izquierda, 0% desde arriba) */
+        100% 80%,/* Punto 3: en el borde derecho, a la mitad vertical (100% desde la izquierda, 50% desde arriba) */
+        90% 100%,/* Punto 4: cerca del borde inferior derecho (90% desde la izquierda, 100% desde arriba) */
+        10% 100%,/* Punto 5: cerca del borde inferior izquierdo (10% desde la izquierda, 100% desde arriba) */
+        0% 80%   /* Punto 6: en el borde izquierdo, a la mitad vertical (0% desde la izquierda, 50% desde arriba) */
+        );
+        bottom: 103px;
+        left: 483px;
+      }
+      
+      .custom-shape--superior__derecho--minuto__segundo{
+          position: absolute;
+          width: 47px;
+          height: 15px;
+          background-color:var(--color-secundario);
+                    clip-path: polygon(
+              18% 0%,
+              85% 0%,
+              100% 50%,
+              85% 100%,
+              6% 100%,
+              0% 75%
+              );
+              bottom: 178px;
+              left: 461px;
+              transform: rotate(90deg);
+          }
+          .custom-shape--superior__izquierdo--minuto__segundo{
+              position: absolute;
+              width: 47px;
+    height: 15px;
+    background-color:var(--color-secundario);
+        clip-path: polygon(
+      18% 0%,
+      85% 0%,
+      100% 50%,
+       85% 100%,
+        18% 100%,
+        0% 20%
+        );
+        bottom: 178px;
+        left: 510px;
+        transform: rotate(90deg);
+      }
+      
+      .custom-shape--inferior__derecho--minuto__segundo{
+          position: absolute;
+          width: 47px;
+          height: 15px;
+          background-color:var(--color-secundario);
+                    clip-path: polygon(
+              18% 0%,
+              85% 0%,
+              100% 50%,
+              85% 100%,
+              18% 100%,
+              0% 20%
+              );
+              bottom: 126px;
+              left: 461px;
+              transform: rotate(270deg);
+          }
+          
+          .custom-shape--inferior__izquierdo--minuto__segundo{
+              position: absolute;
+              width: 47px;
+              height: 15px;
+              background-color:var(--color-secundario);
+                            clip-path: polygon(
+                  18% 0%,
+                  85% 0%,
+        100% 50%,
+         85% 100%,
+          6% 100%,
+          0% 75%
+          );
+          bottom: 126px;
+  left: 510px;
+  transform:rotate(-90deg) ;
+}
+
